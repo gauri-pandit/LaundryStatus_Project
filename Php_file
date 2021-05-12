@@ -1,6 +1,10 @@
 # php file code to read test.txt last row and to show machine status output on browser
 
 <?php
+//to refresh the browser every 180 seconds i.e 3 minutes to see updated machine status automatically
+$url1=$_SERVER['REQUEST_URI'];
+header("Refresh: 180; URL=$url1");
+					
 $line = '';
 $f = fopen('test.txt', 'r');
 $cursor = -1;
